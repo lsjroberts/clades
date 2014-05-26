@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="cladesApp">
+    <head>
+        <title>Clades</title>
+
+        <script src="/assets/scripts/vendor/angular.min.js"></script>
+        <script src="/assets/scripts/vendor/angular-animation.min.js"></script>
+        <script src="/assets/scripts/vendor/angular-route.min.js"></script>
+
+        <script src="/app/app.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Clades</h1>
+        </header>
+
+        <section ng-controller="TaxonsController">
+            <section class="search">
+                <label>
+                    Search
+                    <input type="text" ng-model="searchKeywords">
+                </label>
+
+                <p>{{ searchKeywords }}</p>
+            </section>
+
+            <section class="taxons" ng-repeat="taxon in taxons | filter: searchKeywords">
+                <article>
+                    <h1>{{ taxon.name }}</h1>
+
+                    <p>{{ taxon.rank }}</p>
+
+                    <aside>
+                        <p>{{ taxon.extant }}</p>
+                    </aside>
+                </article>
+            </section>
+        </section>
+    </body>
+</html>
