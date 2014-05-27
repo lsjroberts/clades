@@ -1,0 +1,15 @@
+<article ng-repeat="taxon in taxons"
+    class="taxon {{ taxon.rank }}"
+    data-id="{{ taxon.id }}"
+    data-parentID="{{ taxon.parentID }}"
+>
+    <a class="ancestors" ui-sref="taxons.show({ id: taxon.parentID })"></a>
+
+    <h1>{{ taxon.name }}</h1>
+
+    <p>{{ taxon.rank }}</p>
+
+    <a class="descendants" ui-sref="taxons.show({ id: taxon.id })"></a>
+</article>
+
+<section class="children" ui-view></section>

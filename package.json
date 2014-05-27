@@ -1,0 +1,11 @@
+{
+  "devDependencies": {},
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-concat": "^2.2.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-watch": "^0.6.5"
+  }
+}

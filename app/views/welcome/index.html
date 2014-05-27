@@ -1,0 +1,27 @@
+<article class="welcome container">
+    <header>
+        <h1>Welcome</h1>
+    </header>
+
+    <p>This project is an attempt to provide an easy to use interactive resource listing of the classification of organisms and their relationships between one another, the tree of life.</p>
+
+    <p>Find out more <a ui-sref="about">about this project</a>.</p>
+
+    <p>You can search for any organism below or begin at the top of the tree.</p>
+
+    <section class="search">
+        <label for="keywords">Search for an organism</label>
+
+        <input id="keywords" type="text" ng-model="keywords" placeholder="e.g. 'Human' or 'Homo Sapiens'">
+
+        <small>popular name or scientific classification</small>
+    </section>
+
+    <section class="taxons">
+        <article class="taxon life">
+            <h1>Life</h1>
+
+            <a class="descendants" ui-sref="taxons.show({ id: 1 })"></a>
+        </article>
+    </section>
+</article>

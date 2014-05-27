@@ -3,38 +3,31 @@
     <head>
         <title>Clades</title>
 
+        <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/assets/styles/combined.css">
+
         <script src="/assets/scripts/vendor/angular.min.js"></script>
         <script src="/assets/scripts/vendor/angular-animation.min.js"></script>
-        <script src="/assets/scripts/vendor/angular-route.min.js"></script>
+        <script src="/assets/scripts/vendor/angular-ui-router.min.js"></script>
 
         <script src="/app/app.js"></script>
+        <script src="/app/controllers/TaxonsController.js"></script>
+        <script src="/app/controllers/TaxonsShowController.js"></script>
+        <script src="/app/controllers/TaxonsChildrenController.js"></script>
+        <script src="/app/factories/TaxonsFactory.js"></script>
+
+        <script src="/assets/scripts/vendor/zepto.min.js"></script>
+        <script src="/assets/scripts/taxons.js"></script>
     </head>
     <body>
-        <header>
-            <h1>Clades</h1>
-        </header>
+        <div id="wrapper">
+            <div ui-view class="view-animate"></div>
 
-        <section ng-controller="TaxonsController">
-            <section class="search">
-                <label>
-                    Search
-                    <input type="text" ng-model="searchKeywords">
-                </label>
-
-                <p>{{ searchKeywords }}</p>
-            </section>
-
-            <section class="taxons" ng-repeat="taxon in taxons | filter: searchKeywords">
-                <article>
-                    <h1>{{ taxon.name }}</h1>
-
-                    <p>{{ taxon.rank }}</p>
-
-                    <aside>
-                        <p>{{ taxon.extant }}</p>
-                    </aside>
-                </article>
-            </section>
-        </section>
+            <footer id="site-footer">
+                <p>developed by <a href="http://gelatindesign.co.uk">laurence roberts</a></p>
+                <p>open source code available at <a href="http://github.com/lsjroberts/clades">github.com/lsjroberts/clades</a></p>
+                <p>api documentation available at <a href="/api/docs">clades.info/api/docs</a></p>
+            </footer>
+        </div>
     </body>
 </html>
