@@ -158,18 +158,28 @@ a {
     }
 }
 
+.taxons {
+    margin: 0 auto;
+    width: 90%;
+}
+
 // Taxon
 .taxon {
     position: relative;
     display: inline-block;
-    padding: 1em 3em;
+    padding: .5em 1.5em;
     border: 1px solid #ccc;
     min-width: 10em;
+    font-size: .8em;
     text-align: center;
 
     h1 {
         margin: 0;
         font-size: 1.2em;
+    }
+
+    p {
+        margin: 0;
     }
 
     a.ancestors,
